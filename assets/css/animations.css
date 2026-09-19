@@ -1,0 +1,125 @@
+/* Base animation classes */
+.js-enabled .hero-section,
+.js-enabled .card-premium,
+.js-enabled .stat-card,
+.js-enabled .cta-card,
+.js-enabled .site-footer,
+.js-enabled .product-card {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 800ms ease, transform 800ms ease;
+    will-change: opacity, transform;
+}
+
+/* Global Motion System */
+.js-enabled .motion-fade,
+.js-enabled .motion-slide-up,
+.js-enabled .motion-scale {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 800ms ease, transform 800ms ease;
+    will-change: opacity, transform;
+}
+
+/* Triggered state */
+.js-enabled .is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button Micro-interactions */
+.btn {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Stagger delays for sibling elements */
+.card-premium:nth-child(2), .stat-card:nth-child(2), .product-card:nth-child(2) { transition-delay: 100ms; }
+.card-premium:nth-child(3), .stat-card:nth-child(3), .product-card:nth-child(3) { transition-delay: 200ms; }
+.card-premium:nth-child(4), .stat-card:nth-child(4), .product-card:nth-child(4) { transition-delay: 300ms; }
+.card-premium:nth-child(5), .stat-card:nth-child(5), .product-card:nth-child(5) { transition-delay: 400ms; }
+.card-premium:nth-child(6), .stat-card:nth-child(6), .product-card:nth-child(6) { transition-delay: 500ms; }
+.card-premium:nth-child(7), .stat-card:nth-child(7), .product-card:nth-child(7) { transition-delay: 600ms; }
+.card-premium:nth-child(8), .stat-card:nth-child(8), .product-card:nth-child(8) { transition-delay: 700ms; }
+.card-premium:nth-child(9), .stat-card:nth-child(9), .product-card:nth-child(9) { transition-delay: 800ms; }
+.card-premium:nth-child(10), .stat-card:nth-child(10), .product-card:nth-child(10) { transition-delay: 900ms; }
+.card-premium:nth-child(11), .stat-card:nth-child(11), .product-card:nth-child(11) { transition-delay: 1000ms; }
+.card-premium:nth-child(12), .stat-card:nth-child(12), .product-card:nth-child(12) { transition-delay: 1100ms; }
+
+/* Pulse animation for floating elements */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+}
+.floating-whatsapp {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .js-enabled .hero-section,
+    .js-enabled .card-premium,
+    .js-enabled .stat-card,
+    .js-enabled .cta-card,
+    .js-enabled .site-footer,
+    .js-enabled .product-card,
+    .js-enabled .motion-fade,
+    .js-enabled .motion-slide-up,
+    .js-enabled .motion-scale {
+        transition: none !important;
+        animation: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+    
+    .floating-whatsapp,
+    .brands-marquee__track {
+        animation: none !important;
+        transform: none !important;
+    }
+
+    /* Disable micro-interactions */
+    .card-premium:hover,
+    .btn:hover,
+    .stat-card:hover .stat-card__icon svg {
+        transform: none !important;
+    }
+    
+    .card-premium:hover .card-premium__divider {
+        width: 40px !important;
+    }
+}
+
+/* Background SVG Animations (Stats and CTA) */
+@keyframes data-flow-dash {
+    from { stroke-dashoffset: 100; }
+    to { stroke-dashoffset: 0; }
+}
+.stats-world-map path[stroke-dasharray],
+.cta-card__deco path[stroke-dasharray] {
+    animation: data-flow-dash 4s linear infinite;
+}
+
+@keyframes node-pulse-opacity {
+    0%, 100% { opacity: 0.15; }
+    50% { opacity: 1; }
+}
+.stats-world-map circle:not([filter]),
+.cta-card__deco circle:not([filter]) {
+    animation: node-pulse-opacity 5s infinite ease-in-out;
+}
+.stats-world-map circle:not([filter]):nth-of-type(odd),
+.cta-card__deco circle:not([filter]):nth-of-type(odd) {
+    animation-delay: 2.5s;
+}
+
+@keyframes wave-drift {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+.stats-world-map path:not([stroke-dasharray]),
+.cta-card__deco path:not([stroke-dasharray]) {
+    animation: wave-drift 15s infinite ease-in-out;
+}

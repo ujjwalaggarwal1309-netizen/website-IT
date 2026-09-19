@@ -1,0 +1,35 @@
+/*
+Theme Name: Infinity IT Solutions
+Theme URI: https://infinityitsolutions.co.in
+Author: Infinity IT Solutions
+Author URI: https://infinityitsolutions.co.in
+Description: Custom WordPress theme for Infinity IT Solutions — B2B enterprise IT hardware supplier. Generates enquiries from enterprise customers across India.
+Version: 1.2.6
+Tested up to: 6.5
+Requires at least: 6.3
+Requires PHP: 8.1
+Text Domain: it-hardware-supply
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+@import url("assets/css/variables.css");
+@import url("assets/css/utilities.css?v=37");
+@import url("assets/css/components.css?v=37");
+@import url("assets/css/animations.css");
+@import url("assets/css/page-header.css");
+@import url("assets/css/header.css");
+@import url("assets/css/homepage.css?v=37");
+@import url("assets/css/products.css?v=37");
+@import url("assets/css/product-single.css?v=37");
+@import url("assets/css/about.css?v=37");
+@import url("assets/css/contact.css?v=37");
+@import url("assets/css/footer.css");
+@import url("assets/css/responsive.css");
+
+
+
+
+
+
+

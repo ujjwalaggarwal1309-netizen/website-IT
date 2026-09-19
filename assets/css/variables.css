@@ -1,0 +1,18 @@
+:root {
+	--color-primary: #1B4DDB;
+	--color-primary-dark: #0D2665;
+	--color-primary-light: #E8F0FE;
+	--color-accent: #F58220;
+	--color-accent-hover: #E06D10;
+	--color-background-white: #FFFFFF;
+	--color-background-light: #F5F7FA;
+	--color-heading: #0D2665;
+	--color-body: #4A4A68;
+	--color-border: #E0E4EC;
+	--color-white: #FFFFFF;
+	--color-whatsapp: #25D366;
+	--shadow-soft: 0 4px 20px rgba(0,0,0,.08);
+	--radius-card: 12px;
+	--radius-button: 8px;
+	--container-width: 1200px;
+}

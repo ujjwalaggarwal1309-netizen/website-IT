@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" role="img" aria-label="Enterprise IT hardware infrastructure illustration">
+  <title>Enterprise IT Hardware Infrastructure</title>
+  <!--
+    hero-illustration.svg
+    Displayed in the hero section right column on homepage
+    Background: navy gradient (set by hero section CSS)
+    Colors: white semi-transparent + orange accents
+    Source: Phase 2 brand assets / WEBSITE_DESIGN_SPEC.md
+  -->
+
+  <!-- Glow rings (decorative background) -->
+  <circle cx="260" cy="210" r="195" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.05"/>
+  <circle cx="260" cy="210" r="155" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.06"/>
+  <circle cx="260" cy="210" r="110" fill="rgba(255,255,255,0.03)"/>
+
+  <!-- ── Main Server Rack Unit ───────────────────────────── -->
+  <rect x="95" y="54" width="248" height="312" rx="18" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+
+  <!-- Rack top bezel -->
+  <rect x="95" y="54" width="248" height="22" rx="18" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="116" cy="65" r="3" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="128" cy="65" r="3" fill="#F58220"/>
+  <circle cx="140" cy="65" r="3" fill="rgba(255,255,255,0.3)"/>
+
+  <!-- ── Server Unit 1 ───────────────────────────────────── -->
+  <rect x="111" y="88" width="216" height="42" rx="7" fill="rgba(255,255,255,0.09)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+  <!-- Drive bays -->
+  <rect x="123" y="98" width="110" height="14" rx="4" fill="rgba(255,255,255,0.08)"/>
+  <!-- LEDs -->
+  <circle cx="306" cy="105" r="4" fill="#F58220"/>
+  <circle cx="318" cy="105" r="4" fill="#F58220" fill-opacity="0.55"/>
+  <circle cx="306" cy="118" r="4" fill="rgba(255,255,255,0.0)"/>
+  <!-- Power button -->
+  <circle cx="308" cy="109" r="0" fill="none"/>
+  <rect x="309" y="97" width="12" height="26" rx="3" fill="rgba(255,255,255,0.07)"/>
+
+  <!-- ── Server Unit 2 ───────────────────────────────────── -->
+  <rect x="111" y="140" width="216" height="42" rx="7" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <rect x="123" y="150" width="80" height="14" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <rect x="210" y="150" width="40" height="14" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <circle cx="306" cy="157" r="4" fill="rgba(255,255,255,0.5)"/>
+  <circle cx="318" cy="157" r="4" fill="rgba(255,255,255,0.3)"/>
+  <rect x="309" y="149" width="12" height="26" rx="3" fill="rgba(255,255,255,0.06)"/>
+
+  <!-- ── Server Unit 3 ───────────────────────────────────── -->
+  <rect x="111" y="192" width="216" height="42" rx="7" fill="rgba(255,255,255,0.09)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+  <rect x="123" y="202" width="130" height="14" rx="4" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="306" cy="209" r="4" fill="#F58220" fill-opacity="0.7"/>
+  <circle cx="318" cy="209" r="4" fill="rgba(255,255,255,0.3)"/>
+  <rect x="309" y="201" width="12" height="26" rx="3" fill="rgba(255,255,255,0.06)"/>
+
+  <!-- ── Storage Bay Section ────────────────────────────── -->
+  <rect x="111" y="244" width="216" height="60" rx="7" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <!-- 4 drive bays -->
+  <rect x="123" y="256" width="44" height="36" rx="5" fill="rgba(255,255,255,0.08)"/>
+  <rect x="173" y="256" width="44" height="36" rx="5" fill="rgba(255,255,255,0.08)"/>
+  <rect x="223" y="256" width="44" height="36" rx="5" fill="rgba(255,255,255,0.08)"/>
+  <rect x="273" y="256" width="44" height="36" rx="5" fill="rgba(255,255,255,0.05)"/>
+  <!-- Drive activity lines -->
+  <line x1="128" y1="268" x2="162" y2="268" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="128" y1="274" x2="155" y2="274" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="178" y1="268" x2="212" y2="268" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="178" y1="274" x2="205" y2="274" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="228" y1="268" x2="262" y2="268" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="134" cy="284" r="3" fill="#F58220" fill-opacity="0.7"/>
+  <circle cx="184" cy="284" r="3" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="234" cy="284" r="3" fill="rgba(255,255,255,0.4)"/>
+
+  <!-- ── Rack base panel ────────────────────────────────── -->
+  <rect x="111" y="314" width="216" height="30" rx="7" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <rect x="123" y="323" width="60" height="8" rx="3" fill="rgba(255,255,255,0.07)"/>
+  <circle cx="306" cy="329" r="3" fill="#F58220" fill-opacity="0.4"/>
+  <circle cx="316" cy="329" r="3" fill="rgba(255,255,255,0.2)"/>
+
+  <!-- ── Right network connection lines ─────────────────── -->
+  <path d="M343 109 Q390 109 410 80" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" fill="none" stroke-dasharray="5,4"/>
+  <circle cx="410" cy="80" r="8" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <circle cx="410" cy="80" r="3" fill="rgba(255,255,255,0.4)"/>
+
+  <path d="M343 161 Q390 161 420 150" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none" stroke-dasharray="5,4"/>
+  <circle cx="420" cy="150" r="7" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <circle cx="420" cy="150" r="2.5" fill="rgba(255,255,255,0.35)"/>
+
+  <path d="M343 213 Q395 213 430 240" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none" stroke-dasharray="5,4"/>
+  <circle cx="430" cy="240" r="7" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <circle cx="430" cy="240" r="2.5" fill="#F58220" fill-opacity="0.5"/>
+
+  <!-- ── Left connection lines ───────────────────────────── -->
+  <path d="M95 130 Q60 130 45 105" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none" stroke-dasharray="5,4"/>
+  <circle cx="45" cy="105" r="8" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <circle cx="45" cy="105" r="3" fill="rgba(255,255,255,0.35)"/>
+
+  <path d="M95 200 Q55 200 40 230" stroke="rgba(255,255,255,0.18)" stroke-width="1.5" fill="none" stroke-dasharray="5,4"/>
+  <circle cx="40" cy="230" r="7" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <circle cx="40" cy="230" r="2.5" fill="rgba(255,255,255,0.3)"/>
+
+  <!-- ── Floating data particles ────────────────────────── -->
+  <circle cx="460" cy="300" r="5" fill="#F58220" fill-opacity="0.5"/>
+  <circle cx="472" cy="278" r="3.5" fill="#F58220" fill-opacity="0.35"/>
+  <circle cx="455" cy="262" r="2.5" fill="#F58220" fill-opacity="0.25"/>
+  <circle cx="468" cy="255" r="2" fill="#F58220" fill-opacity="0.2"/>
+
+  <circle cx="30" cy="310" r="4.5" fill="#F58220" fill-opacity="0.4"/>
+  <circle cx="18" cy="290" r="3" fill="#F58220" fill-opacity="0.28"/>
+  <circle cx="35" cy="278" r="2" fill="#F58220" fill-opacity="0.2"/>
+
+  <!-- Bottom rack shadow/base -->
+  <rect x="115" y="378" width="208" height="4" rx="2" fill="rgba(255,255,255,0.1)"/>
+  <rect x="130" y="382" width="178" height="2" rx="1" fill="rgba(255,255,255,0.05)"/>
+</svg>

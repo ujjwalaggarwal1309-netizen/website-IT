@@ -1,0 +1,18 @@
+/*
+ * components.css — INTENTIONALLY CLEARED (Phase 1 cleanup)
+ *
+ * This file previously contained a conflicting CSS design system that
+ * duplicated and overrode the canonical design tokens defined in variables.css,
+ * utilities.css, and the page-specific stylesheets.
+ *
+ * It is NOT imported by either style.css entry point and was dead code.
+ * Cleared to prevent confusion if accidentally imported in future.
+ *
+ * All component styles are in their respective partials:
+ *   - header.css  : Top bar, navigation, mobile menu
+ *   - homepage.css: Hero, category grid, stats, CTA
+ *   - products.css: Product grid, sidebar, cards, pagination
+ *   - about.css   : About layout, mission, feature cards
+ *   - contact.css : Contact form, info cards, map
+ *   - footer.css  : Footer grid, WhatsApp button, back-to-top
+ */

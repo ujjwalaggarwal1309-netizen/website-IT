@@ -1,0 +1,51 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, sans-serif; color: var(--color-body); background: var(--color-background-white); line-height: 1.6; font-size: 16px; }
+a { color: var(--color-primary); text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; width: 100%; }
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 32px; border-radius: var(--radius-button); font-weight: 600; font-size: 1rem; text-decoration: none; transition: all 250ms ease; cursor: pointer; border: 2px solid transparent; gap: 8px; white-space: nowrap; width: fit-content; }
+
+/* Orange filled — primary action (Explore Products, Enquire Now, Send Enquiry) */
+.btn-accent, .btn-primary { background: var(--color-accent); color: var(--color-white); border-color: var(--color-accent); }
+.btn-accent:hover, .btn-primary:hover { background: var(--color-accent-hover); border-color: var(--color-accent-hover); transform: translateY(-2px); color: var(--color-white); box-shadow: 0 8px 24px rgba(245, 130, 32, 0.25); }
+
+/* SVG Arrow Micro-interaction */
+.btn svg { transition: transform 300ms ease; }
+.btn:hover svg { transform: translateX(4px); }
+
+/* White outline — secondary action on dark backgrounds (Request a Quote in hero) */
+.btn-secondary { border-color: var(--color-white); color: var(--color-white); background: transparent; }
+.btn-secondary:hover { background: var(--color-white); color: var(--color-primary); }
+
+/* Blue outline — secondary action on light backgrounds */
+.btn-outline { border-color: var(--color-primary); color: var(--color-primary); background: transparent; }
+.btn-outline:hover { background: var(--color-primary); color: var(--color-white); }
+
+/* Full width — used on contact form submit */
+.btn-full { width: 100%; justify-content: center; }
+.button-group { display: flex; gap: 16px; flex-wrap: wrap; }
+.screen-reader-text { position: absolute; left: -9999px; }
+.responsive-image { width: 100%; object-fit: cover; }
+
+/* Form feedback messages */
+.form-message { padding: 16px 20px; border-radius: var(--radius-card); margin-bottom: 24px; font-weight: 500; }
+.form-message--success { background: #e6f9ee; color: #1a5c35; border: 1px solid #8ed4aa; }
+.form-message--error   { background: #fde8e8; color: #7c1a1a; border: 1px solid #f5aaaa; }
+
+/* Form row wrapper */
+.form-row { margin-bottom: 20px; }
+.form-row label { display: block; font-weight: 500; margin-bottom: 6px; color: var(--color-heading); font-size: 0.9375rem; }
+.form-row .required { color: var(--color-accent); }
+
+/* ── Keyboard Focus Styles (WCAG 2.1 AA) ─────────────────────────────────── */
+/* Remove default outline only on mouse interaction; keep it for keyboard users */
+:focus { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+:focus:not(:focus-visible) { outline: none; }
+:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 3px; }
+
+/* Buttons inherit focus-visible from above; fine-tune for premium look */
+.btn:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 3px; box-shadow: 0 0 0 6px rgba(245, 130, 32, 0.2); }
+
+/* Form inputs */
+.form-input:focus, .form-input:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 0; border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(27, 77, 219, 0.15); }
+

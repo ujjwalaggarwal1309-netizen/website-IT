@@ -1,0 +1,320 @@
+/* ==========================================================================
+   page-header.css — Premium Page Header Component (v1.0.4-a)
+   Shared across: About, Contact, Products Archive, Category, Single Product
+   Design tokens from variables.css.
+   ========================================================================== */
+
+/* ── Base Page Header ────────────────────────────────────────────────────── */
+.page-header {
+	background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+	color: #ffffff;
+	min-height: 380px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+/* ── Radial glow overlay ─────────────────────────────────────────────────── */
+.page-header::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255,255,255,0.06) 0%, transparent 70%);
+	pointer-events: none;
+	z-index: 1;
+}
+
+/* ── Blurred orange accent circles (decorative) ───────────────────────────── */
+.page-header::after {
+	content: '';
+	position: absolute;
+	width: 320px;
+	height: 320px;
+	border-radius: 50%;
+	background: rgba(246, 139, 31, 0.12);
+	filter: blur(80px);
+	top: -60px;
+	right: 10%;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.page-header__glow-left {
+	position: absolute;
+	width: 240px;
+	height: 240px;
+	border-radius: 50%;
+	background: rgba(246, 139, 31, 0.08);
+	filter: blur(60px);
+	bottom: -40px;
+	left: 8%;
+	pointer-events: none;
+	z-index: 1;
+}
+
+/* ── 5% opacity circuit pattern ──────────────────────────────────────────── */
+.page-header__circuit {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	z-index: 1;
+	opacity: 0.05;
+	color: #ffffff;
+}
+
+.page-header__circuit svg {
+	width: 100%;
+	height: 100%;
+}
+
+/* ── Inner content container ─────────────────────────────────────────────── */
+.page-header__inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0;
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	padding: 48px 0;
+}
+
+/* ── Label Pill ──────────────────────────────────────────────────────────── */
+.page-header__label {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255, 255, 255, 0.12);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	border-radius: 100px;
+	padding: 7px 20px;
+	font-size: 0.6875rem;
+	font-weight: 700;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: #ffffff;
+	line-height: 1;
+	margin-bottom: 20px;
+}
+
+/* ── Main H1 ─────────────────────────────────────────────────────────────── */
+.page-header h1 {
+	font-size: 4rem; /* 64px */
+	font-weight: 800;
+	line-height: 1.1;
+	margin: 0 0 20px;
+	color: #ffffff;
+	max-width: 1000px;
+}
+
+/* ── Orange Accent Divider ───────────────────────────────────────────────── */
+.page-header__divider {
+	width: 80px;
+	height: 4px;
+	background: #F68B1F;
+	border-radius: 999px;
+	flex-shrink: 0;
+	margin-bottom: 24px;
+}
+
+/* ── Subtitle ────────────────────────────────────────────────────────────── */
+.page-header__subtitle {
+	font-size: 1.0625rem;
+	line-height: 1.6;
+	color: rgba(255, 255, 255, 0.82);
+	margin: 0;
+	max-width: 720px;
+}
+
+/* ── Breadcrumbs (below subtitle) ────────────────────────────────────────── */
+.page-header .breadcrumbs {
+	margin-top: 4px;
+}
+
+.page-header .breadcrumbs ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0;
+	flex-wrap: wrap; /* allow multi-line on small screens */
+	white-space: normal;
+	overflow: visible;
+	max-width: 100%;
+}
+
+.page-header .breadcrumbs li {
+	display: flex;
+	align-items: center;
+	font-size: 0.875rem; /* 14px */
+	color: rgba(255, 255, 255, 0.8);
+	opacity: 0.8;
+	white-space: nowrap;
+}
+
+.page-header .breadcrumbs li + li::before {
+	content: '/';
+	margin: 0 8px;
+	opacity: 0.5;
+	font-size: 0.75rem;
+}
+
+.page-header .breadcrumbs a {
+	color: rgba(255, 255, 255, 0.8);
+	text-decoration: none;
+	transition: color 200ms ease;
+	border-radius: 2px;
+	font-size: 0.875rem;
+}
+
+.page-header .breadcrumbs a:hover {
+	color: var(--color-white);
+	text-decoration: underline;
+}
+
+.page-header .breadcrumbs a:focus-visible {
+	outline: 2px solid rgba(255, 255, 255, 0.8);
+	outline-offset: 2px;
+}
+
+/* Current page — orange, slightly more visible */
+.page-header .breadcrumbs [aria-current="page"] {
+	color: #F68B1F;
+	font-weight: 600;
+	opacity: 1;
+}
+
+/* ── Contact Strip (phone + email inline) ─────────────────────────────────── */
+.page-header__contact-strip {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 28px;
+	flex-wrap: wrap;
+	margin-bottom: 0;
+}
+
+.page-header__contact-item {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 0.9375rem;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 0.9);
+	text-decoration: none;
+	transition: color 200ms ease;
+}
+
+.page-header__contact-item:hover {
+	color: #F68B1F;
+}
+
+.page-header__contact-item:focus-visible {
+	outline: 2px solid rgba(255, 255, 255, 0.8);
+	outline-offset: 3px;
+	border-radius: 3px;
+}
+
+.page-header__contact-icon {
+	flex-shrink: 0;
+	color: #F68B1F;
+}
+
+.page-header__contact-sep {
+	width: 1px;
+	height: 18px;
+	background: rgba(255, 255, 255, 0.25);
+	display: block;
+}
+
+/* ── Decorative SVG background elements ──────────────────────────────────── */
+.page-header__deco {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	pointer-events: none;
+	display: flex;
+	align-items: center;
+	z-index: 1;
+	opacity: 0.07;
+	color: #ffffff;
+}
+
+.page-header__deco--left {
+	left: 0;
+	transform: translateX(-10%);
+}
+
+.page-header__deco--right {
+	right: 0;
+	transform: translateX(10%);
+}
+
+/* ── Products-specific variant ───────────────────────────────────────────── */
+.page-header-products {
+	/* Inherits base .page-header — no additional padding overrides needed */
+}
+/* ── Page-Specific Overrides ─────────────────────────────────────────────── */
+#about-page-title {
+	white-space: nowrap;
+}
+
+/* ── Responsive: Tablet (992px) ──────────────────────────────────────────── */
+@media (max-width: 992px) {
+	.page-header {
+		min-height: 320px;
+	}
+
+	.page-header h1 {
+		font-size: 3rem; /* 48px */
+	}
+
+	#about-page-title {
+		white-space: normal;
+	}
+
+	.page-header__deco {
+		opacity: 0.05;
+	}
+}
+
+/* ── Responsive: Mobile (767px) ──────────────────────────────────────────── */
+@media (max-width: 767px) {
+	.page-header {
+		min-height: 280px;
+	}
+
+	.page-header h1 {
+		font-size: 2.25rem; /* 36px */
+	}
+
+	.page-header__deco {
+		display: none;
+	}
+
+	.page-header__contact-strip {
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.page-header__contact-sep {
+		display: none;
+	}
+
+	.page-header__inner {
+		padding: 36px 0;
+	}
+}
+
+/* ── prefers-reduced-motion ──────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+	.page-header__glow-left,
+	.page-header::after {
+		filter: none;
+		background: transparent;
+	}
+}

@@ -1,0 +1,20 @@
+{
+  "name": "theme",
+  "version": "1.0.0",
+  "description": "A custom, enterprise-grade WordPress theme developed for Infinity IT Solutions. Designed to generate high-quality B2B hardware enquiries across India, focusing on performance, accessibility, and modern aesthetics.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@fontsource/inter": "^5.3.0",
+    "text-to-svg": "^3.1.5"
+  }
+}

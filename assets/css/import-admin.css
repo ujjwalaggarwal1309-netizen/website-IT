@@ -1,0 +1,227 @@
+/**
+ * Infinity Import Engine — Admin Styles
+ */
+
+.iths-import-wrap {
+	max-width: 1000px;
+}
+
+.iths-badge {
+	background: #0073aa;
+	color: #fff;
+	font-size: 11px;
+	padding: 2px 6px;
+	border-radius: 3px;
+	vertical-align: middle;
+	margin-left: 8px;
+}
+
+.iths-card {
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	border-radius: 4px;
+	padding: 20px;
+	margin-top: 20px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+}
+
+.iths-tab-content {
+	margin-top: 20px;
+}
+
+.iths-actions {
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px solid #eee;
+	display: flex;
+	gap: 12px;
+}
+
+/* Stat Bar */
+.iths-stat-bar {
+	display: flex;
+	gap: 16px;
+	margin-bottom: 20px;
+	padding: 12px 16px;
+	background: #f9f9f9;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.iths-stat {
+	font-weight: 600;
+	color: #3c434a;
+}
+
+.iths-stat span {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 12px;
+	color: #fff;
+	margin-right: 6px;
+}
+
+.iths-stat.create span { background: #00a32a; }
+.iths-stat.update span { background: #2271b1; }
+.iths-stat.skip span { background: #646970; }
+.iths-stat.warning span { background: #dba617; color: #000; }
+
+/* Preview Table */
+.iths-preview-table-container {
+	overflow-x: auto;
+	max-height: 500px;
+	overflow-y: auto;
+	margin-top: 15px;
+	border: 1px solid #ccd0d4;
+}
+
+.iths-preview-table {
+	table-layout: fixed;
+	width: 100%;
+	min-width: 1000px;
+	border: none;
+	margin: 0;
+}
+
+.iths-preview-table th,
+.iths-preview-table td {
+	padding: 8px 10px;
+	vertical-align: middle;
+}
+
+.iths-preview-table th.col-id { width: 10%; }
+.iths-preview-table th.col-name { width: 28%; }
+.iths-preview-table th.col-action { width: 12%; text-align: center; }
+.iths-preview-table th.col-brand { width: 12%; }
+.iths-preview-table th.col-cat { width: 15%; }
+.iths-preview-table th.col-part { width: 13%; }
+.iths-preview-table th.col-warn { width: 10%; }
+
+.wrap-cell {
+	white-space: normal;
+	word-wrap: break-word;
+}
+
+.ellipsis-cell {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.center-cell {
+	text-align: center;
+}
+
+.iths-action-badge {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 12px;
+	font-size: 11px;
+	font-weight: 600;
+	color: #fff;
+	white-space: nowrap;
+}
+.iths-badge-create { background: #00a32a; }
+.iths-badge-update { background: #2271b1; }
+.iths-badge-skip   { background: #646970; }
+.iths-badge-failed { background: #d63638; }
+
+.iths-row-create { background: #f2fcf5 !important; }
+.iths-row-update { background: #f0f6fc !important; }
+.iths-row-skip   { background: #f6f7f7 !important; color: #8c8f94; }
+.iths-row-failed { background: #fcf0f1 !important; }
+
+.iths-warning {
+	color: #d63638;
+	font-weight: 600;
+	font-size: 12px;
+	display: block;
+	white-space: normal;
+}
+
+/* Progress */
+.iths-progress-bar-outer {
+	width: 100%;
+	height: 24px;
+	background: #e0e0e0;
+	border-radius: 12px;
+	overflow: hidden;
+	margin: 12px 0;
+	position: relative;
+}
+
+.iths-progress-bar-inner {
+	height: 100%;
+	background: #2271b1;
+	width: 0%;
+	transition: width 0.3s ease;
+}
+
+#iths-progress-text {
+	text-align: right;
+	font-weight: 600;
+	margin-top: 0;
+}
+
+.iths-log-list {
+	max-height: 200px;
+	overflow-y: auto;
+	background: #1e1e1e;
+	color: #d4d4d4;
+	padding: 12px;
+	border-radius: 4px;
+	font-family: monospace;
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.iths-log-list li {
+	margin: 0 0 4px 0;
+	border-bottom: 1px solid #333;
+	padding-bottom: 4px;
+}
+
+.iths-log-list li:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+/* Report Table */
+.iths-report-table {
+	max-width: 400px;
+	margin-bottom: 20px;
+}
+
+.iths-report-table th {
+	width: 250px;
+}
+
+.iths-errors-list {
+	color: #d63638;
+	font-family: monospace;
+	font-size: 12px;
+}
+
+.iths-warnings-list {
+	color: #dba617;
+	font-family: monospace;
+	font-size: 12px;
+}
+
+/* Badges */
+.iths-badge-dry {
+	background: #dba617;
+	color: #000;
+	padding: 2px 6px;
+	border-radius: 3px;
+	font-size: 11px;
+}
+
+.iths-badge-live {
+	background: #00a32a;
+	color: #fff;
+	padding: 2px 6px;
+	border-radius: 3px;
+	font-size: 11px;
+}

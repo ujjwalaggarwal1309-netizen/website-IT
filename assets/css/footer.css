@@ -1,0 +1,275 @@
+/* ==========================================================================
+   footer.css — Site Footer (v1.0.4-a)
+   Layout: 2-column (Logo+Description | Contact+Hours)
+   No Quick Links column.
+   ========================================================================== */
+
+/* ── Footer wrapper ──────────────────────────────────────────────────────── */
+.site-footer {
+	background: radial-gradient(circle at top center, rgba(37,99,235,.08), transparent 50%), linear-gradient(135deg, #082056, #04153F);
+	color: var(--color-white);
+	padding: 70px 0 50px;
+}
+
+/* ── 2-column grid ───────────────────────────────────────────────────────── */
+.footer-grid {
+	display: grid;
+	grid-template-columns: 1.2fr 1fr;
+	gap: 100px;
+	align-items: flex-start;
+}
+
+/* ── Global link styles ──────────────────────────────────────────────────── */
+.site-footer a {
+	color: var(--color-white);
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.site-footer a:hover {
+	color: var(--color-accent);
+}
+
+.site-footer a:focus-visible {
+	outline: 2px solid var(--color-accent);
+	outline-offset: 2px;
+	border-radius: 2px;
+}
+
+/* ── Column 1: Logo + Description ────────────────────────────────────────── */
+.footer-logo {
+	display: inline-block;
+	margin-bottom: 16px;
+}
+
+.footer-logo__img {
+	display: block;
+	width: 220px;
+	height: auto;
+}
+
+.footer-tagline {
+	font-size: 0.875rem;
+	font-weight: 600;
+	color: var(--color-accent);
+	margin-bottom: 0;
+}
+
+.footer-tagline::after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 3px;
+	background: #F58220;
+	border-radius: 999px;
+	margin: 16px 0 20px;
+}
+
+.footer-description {
+	font-size: 0.9rem;
+	line-height: 1.65;
+	max-width: 700px;
+	color: rgba(255, 255, 255, 0.75);
+	margin-bottom: 0;
+}
+
+.footer-trust-badges {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-top: 32px;
+	flex-wrap: wrap;
+}
+
+.footer-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	height: 38px;
+	padding: 0 16px;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+	cursor: default;
+}
+
+.footer-badge:hover {
+	transform: translateY(-2px);
+	border-color: rgba(245, 130, 32, 0.35);
+	box-shadow: 0 8px 24px rgba(245, 130, 32, 0.08);
+}
+
+.footer-badge svg {
+	color: #ffffff;
+}
+
+.footer-badge span {
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1;
+}
+
+@media (max-width: 767px) {
+	.footer-trust-badges {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 12px;
+	}
+}
+
+/* ── Column 2: Contact + Working Hours ───────────────────────────────────── */
+.footer-column:last-child {
+	transform: translateY(-10px);
+}
+
+.footer-column h3 {
+	font-size: 1rem;
+	font-weight: 700;
+	color: var(--color-white);
+	margin-bottom: 16px;
+	letter-spacing: 0.02em;
+}
+
+.footer-contact-item {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 0.9rem;
+	color: rgba(255, 255, 255, 0.85);
+	margin-bottom: 16px;
+	line-height: 1.5;
+}
+
+.footer-contact-item svg {
+	color: #F58220;
+}
+
+.footer-contact-item a {
+	color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-contact-item a:hover {
+	color: var(--color-accent);
+}
+
+.footer-hours {
+	margin-top: 0;
+	padding-top: 16px;
+	border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-hours__label {
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	color: var(--color-white);
+	margin-bottom: 6px;
+}
+
+.footer-hours__value {
+	font-size: 0.9rem;
+	color: rgba(255, 255, 255, 0.85);
+}
+
+/* ── Footer bottom bar ───────────────────────────────────────────────────── */
+.footer-bottom {
+	border-top: 1px solid rgba(255, 255, 255, .16);
+	margin-top: 40px;
+	padding-top: 18px;
+}
+
+.footer-bottom-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
+	min-height: 40px;
+}
+
+.footer-bottom p {
+	font-size: 0.8125rem;
+	color: rgba(255, 255, 255, 0.6);
+	margin: 0;
+}
+
+/* ── Fixed floating buttons ──────────────────────────────────────────────── */
+.floating-whatsapp,
+.back-to-top {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	background: var(--color-whatsapp);
+	z-index: 999;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top {
+	bottom: 92px;
+	background: var(--color-primary);
+	opacity: 0;
+	pointer-events: none;
+	transform: translateY(8px);
+}
+
+.back-to-top.is-visible {
+	opacity: 1;
+	pointer-events: auto;
+	transform: translateY(0);
+}
+
+.back-to-top:focus-visible {
+	outline: 3px solid var(--color-accent);
+	outline-offset: 3px;
+}
+
+/* ── Responsive: Tablet ──────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+	.footer-grid {
+		grid-template-columns: 1fr;
+		gap: 32px;
+		text-align: center;
+	}
+
+	.footer-logo {
+		display: block;
+		text-align: center;
+	}
+
+	.footer-logo__img {
+		margin: 0 auto;
+	}
+
+	.footer-column h3 {
+		text-align: center;
+	}
+
+	.footer-contact-item {
+		justify-content: center;
+	}
+
+	.footer-hours {
+		text-align: center;
+	}
+
+	.footer-bottom-inner {
+		flex-direction: column;
+		text-align: center;
+		gap: 8px;
+	}
+}
+
+/* ── prefers-reduced-motion ──────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+	.floating-whatsapp,
+	.back-to-top {
+		transition: none !important;
+	}
+}

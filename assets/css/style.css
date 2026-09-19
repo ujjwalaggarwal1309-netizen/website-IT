@@ -1,0 +1,12 @@
+/*
+ * assets/css/style.css — REDUNDANT ENTRY POINT (Phase 1 cleanup)
+ *
+ * The canonical CSS entry point is the ROOT /style.css file, which WordPress
+ * loads via wp_enqueue_style() in inc/enqueue.php.
+ *
+ * This file previously mirrored the same @import chain as the root style.css
+ * but is NOT loaded by WordPress or imported by any other file.
+ *
+ * Cleared to prevent accidental double-loading if imported in future.
+ * The authoritative import chain lives in /style.css (root).
+ */
