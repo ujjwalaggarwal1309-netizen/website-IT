@@ -33,7 +33,6 @@
 	.btn { padding: 12px 20px; font-size: 0.9375rem; }
 
 	.container { width: min(100% - 20px, var(--container-width)); }
-	.top-bar { display: none; }
 	.nav-menu, .header-cta { display: none; }
 	.mobile-menu-toggle { display: block; }
 	.mobile-nav { display: block; }

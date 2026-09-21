@@ -752,7 +752,15 @@
 	}
 	.product-image-area { position: static; }
 	.product-info-column { order: -1; }
-	.sticky-identity { display: none; }
+	.sticky-identity { 
+		display: flex; 
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 8px;
+	}
+	.sticky-pn-group { display: none; } /* Hide just the part number to save space, but show the title/sub */
+	.sticky-inner { flex-direction: column; gap: 10px; }
 	.sticky-actions { width: 100%; justify-content: center; }
 }
 

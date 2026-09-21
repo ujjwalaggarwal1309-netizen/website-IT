@@ -9,7 +9,7 @@
  *   - Category badge (first taxonomy term)
  *   - Product title linked to single product page
  *   - Excerpt (18 words)
- *   - "Enquire Now" CTA → /contact/?product={title}
+ *   - "Enquire Now" CTA â†’ /contact/?product={title}
  *
  * Policy:
  *   - No pricing
@@ -44,10 +44,9 @@ $enquire_url = add_query_arg(
 <article
 	class="product-card"
 	aria-labelledby="product-title-<?php the_ID(); ?>"
-	itemscope
-	itemtype="https://schema.org/Product"
+	
 >
-	<?php /* ── Thumbnail ─────────────────────────────────────────────── */ ?>
+	<?php /* â”€â”€ Thumbnail â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */ ?>
 	<a href="<?php the_permalink(); ?>" class="product-card__image-wrap" tabindex="-1" aria-hidden="true">
 		<?php if ( has_post_thumbnail() ) : ?>
 			<?php
@@ -90,7 +89,7 @@ $enquire_url = add_query_arg(
 		*/ ?>
 	</a>
 
-	<?php /* ── Card Body ──────────────────────────────────────────────── */ ?>
+	<?php /* â”€â”€ Card Body â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */ ?>
 	<div class="product-card__body">
 		<h3
 			id="product-title-<?php the_ID(); ?>"
@@ -104,19 +103,19 @@ $enquire_url = add_query_arg(
 			<?php if ( $brand ) : ?>
 				<div class="product-card__meta-chip">
 					<span class="product-card__meta-label"><?php esc_html_e( 'Brand:', 'it-hardware-supply' ); ?></span>
-					<span class="product-card__meta-value" itemprop="brand"><?php echo esc_html( $brand->name ); ?></span>
+					<span class="product-card__meta-value"><?php echo esc_html( $brand->name ); ?></span>
 				</div>
 			<?php endif; ?>
 
 			<?php if ( $oem_pn ) : ?>
 				<div class="product-card__meta-chip">
 					<span class="product-card__meta-label"><?php esc_html_e( 'OEM PN:', 'it-hardware-supply' ); ?></span>
-					<span class="product-card__meta-value" itemprop="sku"><?php echo esc_html( $oem_pn ); ?></span>
+					<span class="product-card__meta-value"><?php echo esc_html( $oem_pn ); ?></span>
 				</div>
 			<?php endif; ?>
 		</div>
 
-		<?php /* ── Enquire Now CTA — per WEBSITE_CONTENT.md ─────────── */ ?>
+		<?php /* â”€â”€ Enquire Now CTA â€” per WEBSITE_CONTENT.md â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */ ?>
 		<a
 			class="btn btn-primary product-card__cta"
 			href="<?php echo esc_url( $enquire_url ); ?>"
@@ -128,3 +127,4 @@ $enquire_url = add_query_arg(
 		</a>
 	</div>
 </article>
+
