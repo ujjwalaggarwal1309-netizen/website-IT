@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- RIGHT COLUMN -->
 		<div class="hero-col-right">
 			<div class="hero-hardware">
-				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/illustrations/about/server.svg?v=' . time() ); ?>" alt="Enterprise Server Rack SVG" class="hero-illustration" loading="eager" fetchpriority="high">
+				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/illustrations/about/server.svg' ); ?>" alt="Enterprise Server Rack SVG" class="hero-illustration" loading="eager" fetchpriority="high">
 				<!-- Glowing floating dots overlay -->
 				<svg class="hero-particles" width="100%" height="100%" viewBox="0 0 400 400" aria-hidden="true" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none;">
 					<circle cx="15%" cy="20%" r="3" class="hero-particle hp-1" />
